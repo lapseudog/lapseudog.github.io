@@ -4,11 +4,3 @@
 @import
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";
-
-<style>
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-</style>
-
-body {
-  font-family: 'Muli', ;
-}
