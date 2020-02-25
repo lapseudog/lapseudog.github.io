@@ -1,5 +1,5 @@
-title: TTTTTT - Welcome here - TTTTTTT
-description: just a new description
+title: TTTT - Welcome here - TTTT
+description: A new description
 theme: minima
 
 # Minima date format
@@ -8,10 +8,10 @@ minima:
   date_format: "%b %-d, %Y"
   skin: solarized
 
-  # generate social links in footer
-  social_links:
-    twitter: jekyllrb
-    github:  jekyll
+  # generate social links in footer#
+#  social_links:
+#    twitter: jekyllrb
+#    github:  jekyll
     # devto: jekyll
     # dribbble: jekyll
     # facebook: jekyll
@@ -46,6 +46,6 @@ minima:
 #header_pages:
 # - about.md
 
-plugins:
+#plugins:
 # - jekyll-feed
 # - jekyll-seo-tag
