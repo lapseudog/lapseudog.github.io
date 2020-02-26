@@ -6,7 +6,7 @@ theme: minima
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
   date_format: "%b %-d, %Y"
-  skin: solarized
+  # skin: solarized
 
   # generate social links in footer#
 #  social_links:
