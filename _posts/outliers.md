@@ -1,0 +1,49 @@
+# How are performing common outliers detection techniques with real data?
+Common outliers detection techniques are usually illustrated with the Normal distribution, however the data is not always distributed that way. While the behaviour of the Normal distribution is usually well known, the other distribution while they are known they are much less common.  Hence errors are probably made, but really how much of an error is made? Several outliers detection techniques will be selected, and tested against univariate data normally distributed; and then these results compared against data which is not drawn from Normal distribution. 
+A few outliers detection techniques have been selected, because I have seen them in several vendors solutions and been discussed on several web pages. Generally these techniques involve selecting a central point of the data, and measuring the distance from the central point by a dispersion measure. As the purpose is to provide a measure, techniques based on visual inspection are not used.
+## Outliers detection techniques
+* Mean and standard deviation, also known as the z-score. The central point of the data is the arithmetic mean, and the measure of dispersion is the standard deviation. 
+* Median and Median Absolute Deviation. The central point of the data is the median (or 50th percentile), and the measure of dispersion is the Median Absolute Deviation.
+* Median and interquartile range (also known as interquartile deviation) method. The central point is the median, and the interquartile range is the measure of dispersion.
+## Measuring the impact
+For data taken a normal distribution the relation between the number of standard deviation and the percentile rank is known. So for the purpose of comparison let’s use the percentile rank associated with the Normal distribution as or gold standard. 
+## Results with common distributions
+
+|Distribution | Rank of mean +2 SD| Rank of mean +3 SD|Rank of MAD +2| Rank of MAD +3|Rank of IQD +2| Rank of IQD +3|
+|--- |--- |--- |--- |--- |--- |--- |
+Normal Distribution |  97.718 |  99.864 | 91.135 |  97.840 | 99.647 |  99.997 |
+std Exponential |  95.024 |  98.159 | 80.957 |  88.229 | 94.449 |  98.139 |
+Exponential 0.5 |  95.021 |  98.165 | 80.930 |  88.242 | 94.471 |  98.161 |
+Exponential 2.0 |  95.020 |  98.160 | 80.889 |  88.185 | 94.445 |  98.147 |
+Exponential 0.1 |  95.008 |  98.170 | 80.906 |  88.188 | 94.413 |  98.142 |
+Gamma shp .1 |  96.210 |  97.755 | 55.791 |  57.420 | 80.190 |  83.236 |
+Gamma shp .5 |  94.982 |  97.795 | 74.452 |  80.964 | 91.188 |  95.795 |
+Gamma shp 1 |  95.038 |  98.172 | 80.861 |  88.159 | 94.463 |  98.155 |
+Gamma shp 3 |  95.567 |  98.824 | 85.652 |  93.119 | 97.146 |  99.485 |
+Gamma shp 5 |  95.909 |  99.058 | 86.891 |  94.304 | 97.837 |  99.714 |
+Gamma shp 10 |  96.325 |  99.317 | 88.197 |  95.440 | 98.484 |  99.867 |
+Power shp .01 |  98.145 |  98.512 | 50.564 |  50.707 | 75.517 |  75.828 |
+Power shp .1 |  93.082 |  96.296 | 55.789 |  57.407 | 80.414 |  83.715 |
+Power shp .5 |  96.403 |  100.000 | 82.650 |  94.812 | 100.000 |  100.000 |
+Power shp 1 |  100.000 |  100.000 | 99.865 |  100.000 | 100.000 |  100.000 |
+Power shp 5 |  100.000 |  100.000 | 100.000 |  100.000 | 100.000 |  100.000 |
+Power shp 10 |  100.000 |  100.000 | 100.000 |  100.000 | 100.000 |  100.000 |
+Power shp 100 |  100.000 |  100.000 | 100.000 |  100.000 | 100.000 |  100.000 |
+Beta 0.5 0.5 |  100.000 |  100.000 | 100.000 |  100.000 | 100.000 |  100.000 |
+Beta 1 1 |  100.000 |  100.000 | 100.000 |  100.000 | 100.000 |  100.000 |
+Beta 1 3 |  95.218 |  99.512 | 84.984 |  93.577 | 98.652 |  100.000 |
+Beta 2 2 |  99.221 |  100.000 | 93.776 |  100.000 | 100.000 |  100.000 |
+Beta 2 5 |  96.140 |  99.650 | 87.980 |  95.957 | 99.215 |  100.000 |
+Beta 5 1 |  100.000 |  100.000 | 100.000 |  100.000 | 100.000 |  100.000 |
+
+## boring details
+predominance of normal distribution :
+https://trends.google.com/trends/explore?date=today%205-y&q=normal%20distribution,power%20law%20distribution,gamma%20distribution,exponential%20distribution
+
+
+generated with 
+Numpy version  1.18.1
+Python version  3.8.1 
+
+In appendix, extract of the code to produce the data is made available.
+
