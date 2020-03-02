@@ -1,11 +1,11 @@
-title: TTTT - Welcome here - TTTT
-description: A new description
+title: - Welcome here - 
+description: A collection of thoughts
 theme: minima
 
 # Minima date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 minima:
-  date_format: "%b %-d, %Y"
+  date_format: "%Y %-d %b"
   # skin: solarized
 
   # generate social links in footer#
