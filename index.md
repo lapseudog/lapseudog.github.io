@@ -3,4 +3,4 @@ layout: home
 list_title: ' '
 ---
 
-I intend to write some posts when I encounter a situation of interest and find a way to deal with it. I hope that in time a title under these thoughts can be categorised will emerge.
+While learning Python from a SAS and C++ background, I thought some results were of interests. I hope that in time a title under these thoughts can be categorised will emerge.
