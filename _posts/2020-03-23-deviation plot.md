@@ -6,10 +6,10 @@ author: lapseudog
 # How to make a deviation plot with Python
 This post is inspired from the post on the “The DO Loop” blog ([https://blogs.sas.com/content/iml/2020/03/02/deviation-plot-baseline.html](https://blogs.sas.com/content/iml/2020/03/02/deviation-plot-baseline.html)). While learning Python it seemed interesting to learn how to make charts using the matplotlib library.
 
-# Extracting the data from SAS
+## Extracting the data from SAS
 First thing adjusting the sas script to use a different date format: From the classic to SAS `Date.` to format probably easier to parse: `yymmdd10.`. Then exporting the results as a CSV and using that as a starting point in Python.
 
-# Data Preparation in Python 
+## Data Preparation in Python 
 As the data is quite simple only numpy is used.
 ```python
 ndata = np.genfromtxt("c:\\Users\\Eric\\Downloads\\Series.csv", delimiter=",", dtype=['datetime64[s]', 'float64'], names=['Date', 'y'], skip_header = 1 )
@@ -26,7 +26,7 @@ The point of interests are :
 * The code is using datetime64[s] instead of datetime64[ns] because only days where used. 
 * `nanmedian` is used to get the median when there are some missing values.
 
-# Chart preparation
+## Chart preparation
 I used the common Matplotlib, other libraries would probably work as well. 
 ```python
 fig, ax = plt.subplots(figsize=(16,6)) # elongated horizontal
