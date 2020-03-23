@@ -1,4 +1,4 @@
---
+---
 layout: post
 author: lapseudog
 ---
@@ -6,10 +6,8 @@ author: lapseudog
 # How to make a deviation plot with Python
 This post is inspired from the post on the “The DO Loop” blog ([https://blogs.sas.com/content/iml/2020/03/02/deviation-plot-baseline.html](https://blogs.sas.com/content/iml/2020/03/02/deviation-plot-baseline.html)). As I am learning Python I thought it was interesting to learn how to make charts using the matplotlib library.
 
-
 # Extracting the data from SAS
 First thing I slightly adjusted the sas script to use a different date format: From the classic to SAS Date. to the format Date yymmdd10. Then exporting the results as a csv and using that as a starting point in Python.
-
 
 # Data Preparation in Python 
 As the data is quite simple only numpy is used.
@@ -58,5 +56,5 @@ Here the point of interests are:
 *   To use the vlines
 *   To choose how the ticks should be placed. The ConciseDateFormatter was selected but if a more careful analysis is needed then another formatter and locator should be used. 
 
-The resulting chart is shown below.
+The resulting chart is shown below:
 ![deviation plot](/assets/deviation-plot-01.png)
