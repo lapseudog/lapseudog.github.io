@@ -4,10 +4,10 @@ author: lapseudog
 ---
 
 # How to make a deviation plot with Python
-This post is inspired from the post on the “The DO Loop” blog ([https://blogs.sas.com/content/iml/2020/03/02/deviation-plot-baseline.html](https://blogs.sas.com/content/iml/2020/03/02/deviation-plot-baseline.html)). As I am learning Python I thought it was interesting to learn how to make charts using the matplotlib library.
+This post is inspired from the post on the “The DO Loop” blog ([https://blogs.sas.com/content/iml/2020/03/02/deviation-plot-baseline.html](https://blogs.sas.com/content/iml/2020/03/02/deviation-plot-baseline.html)). While learning Python it seemed interesting to learn how to make charts using the matplotlib library.
 
 # Extracting the data from SAS
-First thing I slightly adjusted the sas script to use a different date format: From the classic to SAS Date. to the format Date yymmdd10. Then exporting the results as a csv and using that as a starting point in Python.
+First thing adjusting the sas script to use a different date format: From the classic to SAS `Date.` to format probably easier to parse: `yymmdd10.`. Then exporting the results as a CSV and using that as a starting point in Python.
 
 # Data Preparation in Python 
 As the data is quite simple only numpy is used.
@@ -25,7 +25,10 @@ colors = np.where(highs > references, 'darkorange', 'royalblue')
 
 To make the output slightly different, I choose a different reference value: the median.
 
-The point of interest is that in SAS the “min” function handles the missing values by propagating the missing values only when both arguments are missing. In numpy the min function propagates the missing values; I could only find the fmin (and fmax) function that worked as in SAS. 
+The point of interests are :
+* in SAS the `min` function handles the missing values by propagating the missing values only when both arguments are missing. In numpy the `min` function propagates the missing values; I could only find the `fmin` (and `fmax`) function that worked the same way as in SAS. 
+* The code is using datetime64[s] instead of datetime64[ns] because only days where used. 
+* `nanmedian` is used to get the median when there are some missing values.
 
 # Chart preparation
 I used the common Matplotlib, other libraries would probably work as well. 
