@@ -7,7 +7,7 @@ author: lapseudog
 This post is inspired from the post on the “The DO Loop” blog ([https://blogs.sas.com/content/iml/2020/03/02/deviation-plot-baseline.html](https://blogs.sas.com/content/iml/2020/03/02/deviation-plot-baseline.html)). While learning Python it seemed interesting to learn how to make charts using the matplotlib library.
 
 ## Extracting the data from SAS
-First thing adjusting the sas script to use a different date format: From the classic to SAS `Date.` to format probably easier to parse: `yymmdd10.`. Then exporting the results as a CSV and using that as a starting point in Python.
+First thing adjusting the sas script to use a different date format: From the classic SAS format `Date.` to a format probably easier to parse: `yymmdd10.`. Then exporting the results as a CSV and using that as a starting point in Python.
 
 ## Data Preparation in Python 
 As the data is quite simple only numpy is used.
