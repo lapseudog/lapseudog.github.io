@@ -22,6 +22,13 @@ print("frequencies of winning when staying ", winIfStay)
 print("frequencies of winning when switching ", winIfSwitch)
 ```
 
+this output:
+```
+frequencies of winning when staying  0.33322
+frequencies of winning when switching  0.66678
+```
+
+
 To compare with the SAS equivalent:
 
 ```sas
