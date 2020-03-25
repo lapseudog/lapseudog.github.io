@@ -29,7 +29,7 @@ frequencies of winning when switching  0.66678
 ```
 
 
-To compare with the SAS equivalent:
+To compare with the SAS equivalent (copy pasted from the second sas link):
 
 ```sas
 proc iml;
