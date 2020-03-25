@@ -7,7 +7,7 @@ author: lapseudog
 While discovering Python I was looking at some comparison between SAS and Python and tumble upon this comparison ([https://blogs.sas.com/content/sgf/2016/10/12/the-monty-hall-paradox-sas-vs-python/](https://blogs.sas.com/content/sgf/2016/10/12/the-monty-hall-paradox-sas-vs-python/)) and noticed that the “the DO loop” had a pretty, concise and quick piece of code in IML ([https://blogs.sas.com/content/iml/2015/04/01/monty-hall.html](https://blogs.sas.com/content/iml/2015/04/01/monty-hall.html)). This code explores how to code in numpy the equivalent of the IML code, and highlights how remarkably similar the two are.
 
 # Comparative Numpy implementation
-below is the code using numpy 1.18.1:
+below is the code using numpy 1.18.1; variable name chosen to match the one in the original SAS post):
 
 ```python
 nbSims = 100000
