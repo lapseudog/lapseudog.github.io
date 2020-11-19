@@ -12,7 +12,7 @@ First thing adjusting the sas script to use a different date format: From the cl
 ## Data Preparation in Python 
 As the data is quite simple only numpy is used.
 ```python
-ndata = np.genfromtxt("c:\\Users\\Eric\\Downloads\\Series.csv", delimiter=",", dtype=['datetime64[s]', 'float64'], names=['Date', 'y'], skip_header = 1 )
+ndata = np.genfromtxt("c:\\Users\\User\\Downloads\\Series.csv", delimiter=",", dtype=['datetime64[s]', 'float64'], names=['Date', 'y'], skip_header = 1 )
 references = np.full(ndata['Date'].shape, np.nanmedian(ndata['y']) ) # set a reference point as the median 
 lows = np.fmin(references, ndata['y']) # the lower end of the line
 highs = np.fmax(references, ndata['y']) # the higher end of the line
